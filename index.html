@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> Hello there, I am Bilson Digal and this is my personal website </title>
+    <meta content="Hello there, I am Bilson Digal and this is my personal website." name="description">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link href="/style.css" rel="stylesheet">
+    <script>
+        ( (e, t, n, r, c, s) => {
+            e[n] = e[n] || function() {
+                (e[n].q = e[n].q || []).push(arguments)
+            }
+            ,
+            (c = t.createElement(r)).async = 1,
+            c.src = "https://www.clarity.ms/tag/n6rc2us4rz",
+            (s = t.getElementsByTagName(r)[0]).parentNode.insertBefore(c, s)
+        }
+        )(window, document, "clarity", "script")
+    </script>
+    <body class="bg-brand-dark text-brand-light font-sans antialiased">
+        <div id="cursor-dot" class="fixed top-0 left-0 w-3 h-3 bg-brand-green rounded-full z-[9999] pointer-events-none origin-center transform-gpu scale-0 hidden md:flex items-center justify-center">
+            <span id="cursor-text" class="text-xs text-brand-dark font-semibold opacity-0">View</span>
+        </div>
+        <main>
+            <header id="main-header" class="fixed top-0 left-0 w-full p-8 lg:p-12 z-[100] transition-colors duration-500">
+                <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
+                    <div class="relative">
+                        <div id="header-initial-left" class="flex gap-x-6 text-black">
+                            <a href="#work" data-cursor-view class="hover:text-gray-500 transition-colors">Work</a>
+                            <a href="#about" data-cursor-view class="hover:text-gray-500 transition-colors">About</a>
+                            <a href="#certifications" data-cursor-view class="hover:text-gray-500 transition-colors">Certifications</a>
+                            <a href="#contact" data-cursor-view class="hover:text-gray-500 transition-colors">Contact</a>
+                        </div>
+                        <p id="header-scrolled-left" class="absolute top-0 left-0 font-bold text-brand-light opacity-0 pointer-events-none">
+                            <span class="md:inline hidden">Bilson Digal</span>
+                            <span class="md:hidden inline">Bilson </span>
+                    </div>
+                    <div class="relative">
+                        <p id="header-initial-right" class="text-black hidden md:block"> UI UX DESIGNER & DEVELOPER </p>
+                        <div id="header-scrolled-right" class="absolute top-1/2 -translate-y-1/2 md:top-0 md:translate-y-0 right-0 flex gap-x-6 text-brand-light opacity-0 pointer-events-none">
+                            <a href="#work" data-cursor-view class="hover:text-gray-400 transition-colors">Work</a>
+                            <a href="#about" data-cursor-view class="hover:text-gray-400 transition-colors">About</a>
+                            <a href="#network" data-cursor-view class="hover:text-gray-500 transition-colors">Network</a>
+                            <a href="#contact" data-cursor-view class="hover:text-gray-400 transition-colors">Contact</a>
+                        </div>
+                    </div>
+                </header>
+        <section id="home" data-section-name="home" class="relative min-h-screen w-full p-8 lg:p-12 text-black flex items-center bg-[var(--background-light-brand)]"> 
+            <div class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-y-16 pt-32"> 
+                 <!-- Name -->
+                  <div class="md:col-span-3 flex flex-col justify-center"> 
+                    <h1 id="hero-name" class="mt-12 text-7xl sm:text-8xl md:text-9xl font-semibold tracking-tighter leading-none gsap-fade-up"> Bilson Digal </h1>
+                     <p class="text-2xl lg:text-3xl max-w-2xl gsap-fade-up mt-12"> A self-taught full-stack developer passionate about AI, UI/UX, and building tools that make life easier. </p> 
+                     <!-- Buttons --> 
+                      <div class="hero-buttons"> 
+                        <a href="#work" class="btn-primary">View Work</a> 
+                        <a href="#contact" class="btn-secondary">Contact Me</a> 
+                    </div> </div>
+    <!-- Photo (middle right, bigger) -->
+<div class="md:col-span-2 flex justify-center md:justify-end items-center">
+  <!-- fixed size container same as first image -->
+  <div class="w-64 h-64 overflow-hidden rounded-full shadow-lg">
+    <img src="/images/pic.png" 
+         alt="Profile" 
+         class="w-full h-full object-cover transition-opacity duration-700 ease-in-out" 
+         id="profile-image">
+  </div>
+</div>
+
+<script>
+  const images = [
+    "/images/pic.png",
+    "/images/pic2-2.jpeg",
+    "/images/pic4-2.jpeg",
+    "/images/pic5-2.jpeg",
+    "/images/pic7-2.jpeg",
+    "/images/pic8-2.jpeg",
+    "/images/pic9-2.jpeg",
+    "/images/pic11-2.jpeg",       
+     "/images/pic3.jpeg",
+  ];
+
+  let currentIndex = 0;
+  const imgElement = document.getElementById("profile-image");
+
+  setInterval(() => {
+    imgElement.classList.add("opacity-0");
+
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      imgElement.src = images[currentIndex];
+      imgElement.classList.remove("opacity-0");
+    }, 700); // fade duration
+  }, 2000); // change every 2s
+</script>
+    </div>  
+</section>
+
+           <section id="about" data-section-name="about" class="relative min-h-screen w-full px-8 py-16 md:px-16 lg:px-24 flex items-center" data-theme="dark">
+                <div class="w-full max-w-7xl mx-auto grid grid-cols-1 gap-8 md:gap-16 items-start">
+                    <h2 class="text-6xl md:text-8xl text-gray-500 gsap-section-title font-bold">About</h2>
+                    <div class="grid grid-cols1 md:grid-cols-2 gap-12">
+                        <p class="text-3xl md:text-4xl text-white gsap-fade-up">Hi, I'm Bilson Digal 👋 a developer passionate about web technologies, AI-driven products, and creative problem-solving. I enjoy blending design with technology to craft meaningful digital experiences. </p>
+                        <div class="flex flex-col md:flex-row items-start gap-8">
+                            <div class="w-fit h-fit lg:h-64 bg-gray-800 rounded-md gsap-fade-up bg-no-repeat aspect-square bg-contain" style="background-image:url(https://avatars.githubusercontent.com/u/58314282)"></div>
+                            <p class="md:w-1/2 text-brand-gray gsap-fade-up">I love to collaborate on innovative projects, explore new technologies, and share ideas with like-minded people.Beyond coding, I’m an avid gamer, anime enthusiast, and love attending tech meetups. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="skills" data-section-name="skills" class="relative w-full px-8 py-20 md:px-16 lg:px-24">
+  <div class="w-full max-w-4xl mx-auto">
+    <h2 class="text-6xl md:text-8xl text-gray-500 gsap-section-title font-bold mb-12">Capabilities</h2>
+    
+    <!-- Compact Skill Matrix -->
+    <div class="skill-matrix">
+      <!-- Design Skills -->
+      <div class="matrix-column">
+        <div class="matrix-header">
+          <div class="matrix-icon">⟁</div>
+          <h3 class="matrix-title">Design</h3>
+        </div>
+        <div class="matrix-items">
+          <div class="matrix-item" data-level="expert">
+            <span class="item-label">Figma</span>
+            <div class="item-progress"></div>
+          </div>
+          <div class="matrix-item" data-level="advanced">
+            <span class="item-label">UI/UX</span>
+            <div class="item-progress"></div>
+          </div>
+          <div class="matrix-item" data-level="advanced">
+            <span class="item-label">Prototyping</span>
+            <div class="item-progress"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Development Skills -->
+      <div class="matrix-column">
+        <div class="matrix-header">
+          <div class="matrix-icon">⊞</div>
+          <h3 class="matrix-title">Code</h3>
+        </div>
+        <div class="matrix-items">
+          <div class="matrix-item" data-level="expert">
+            <span class="item-label">React</span>
+            <div class="item-progress"></div>
+          </div>
+          <div class="matrix-item" data-level="expert">
+            <span class="item-label">JavaScript</span>
+            <div class="item-progress"></div>
+          </div>
+          <div class="matrix-item" data-level="advanced">
+            <span class="item-label">TypeScript</span>
+            <div class="item-progress"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Skills -->
+      <div class="matrix-column">
+        <div class="matrix-header">
+          <div class="matrix-icon">⧖</div>
+          <h3 class="matrix-title">AI</h3>
+        </div>
+        <div class="matrix-items">
+          <div class="matrix-item" data-level="advanced">
+            <span class="item-label">AI Integration</span>
+            <div class="item-progress"></div>
+          </div>
+          <div class="matrix-item" data-level="intermediate">
+            <span class="item-label">Chatbots</span>
+            <div class="item-progress"></div>
+          </div>
+          <div class="matrix-item" data-level="intermediate">
+            <span class="item-label">Generative AI</span>
+            <div class="item-progress"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Skill Display -->
+    <div class="active-skill">
+      <div class="active-skill-content">
+        <div class="skill-badge" id="skill-badge">Expert</div>
+        <h3 class="skill-name" id="skill-name">Figma</h3>
+        <p class="skill-description" id="skill-description">
+          Creating wireframes, prototypes, and design systems that translate ideas into clear user journeys
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+            <section id="work" data-section-name="work" class="relative min-h-screen w-full px-8 py-16 md:px-16 lg:px-24 flex items-center">
+                <div class="w-full max-w-7xl mx-auto grid grid-cols-1 gap-8 md:gap-16 items-start">
+                    <h2 class="text-6xl md:text-8xl text-gray-500 gsap-section-title font-bold">Work</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative">
+                        <p class="text-3xl md:text-4xl text-white gsap-fade-up h-fit lg:sticky top-[10rem]">Check out what I've been working on.
+                        <div class="flex flex-col">
+                            <a href="https://www.linkedin.com/posts/bilson-digal-099853368_agritech-ai-farmerempowerment-activity-7367080881942892544-V7LI?utm_source=share&utm_medium=member_desktop" data-cursor-view class="block py-12 border-b border-gray-800 gsap-fade-up group" target="_blank">
+                                <div class="project-card group" data-cursor-view>
+  <div class="project-content">
+    <span class="project-number">02</span>
+    <h3 class="project-title">FasalHaat</h3>
+    <p class="project-description">A website for farmers to sell their produce directly to consumers.</p>
+    <div class="project-overlay">
+      <span class="project-tech">Next.js · Tailwind CSS · Firebase</span>
+      <button class="project-btn">View Project →</button>
+    </div>
+  </div>
+</div>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/bilson-digal-099853368_hackhub-activity-7371741629218717697-LTmB?utm_source=share&utm_medium=member_desktop" data-cursor-view class="block py-12 border-b border-gray-800 gsap-fade-up group" target="_blank">
+                                <div class="project-card group" data-cursor-view>
+  <div class="project-content">
+    <span class="project-number">03</span>
+    <h3 class="project-title">Hackhub</h3>
+    <p class="project-description">A platform for developers to collaborate on projects.</p>
+    <div class="project-overlay">
+      <span class="project-tech">Next.js · Tailwind CSS · Firebase</span>
+      <button class="project-btn">View Project →</button>
+    </div>
+  </div>
+</div>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/bilson-digal-099853368_moodlens-appdesign-uxui-activity-7363764423678722048-UEod?utm_source=share&utm_medium=member_desktop" data-cursor-view class="block py-12 border-b border-gray-800 gsap-fade-up group" target="_blank">
+                                <div class="project-card group" data-cursor-view>
+  <div class="project-content">
+    <span class="project-number">04</span>
+    <h3 class="project-title">MoodLens</h3>
+    <p class="project-description">An app designed to help users manage their moods and mental health.</p>
+    <div class="project-overlay">
+      <span class="project-tech">Next.js · Tailwind CSS · Firebase</span>
+      <button class="project-btn">View Project →</button>
+    </div>
+  </div>
+</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="work" data-section-name="work" class="relative min-h-screen w-full px-8 py-16 md:px-16 lg:px-24 flex items-center">
+                <div class="w-full max-w-7xl mx-auto grid grid-cols-1 gap-8 md:gap-16 items-start">
+                    <h2 class="text-6xl md:text-8xl text-gray-500 gsap-section-title font-bold">Work</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative">
+                        <p class="text-3xl md:text-4xl text-white gsap-fade-up h-fit lg:sticky top-[10rem]">Check out what I've been working on.
+                        <div class="flex flex-col">
+                            <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQE1Sr_gW4G9lQAAAZmW9LqI6RiIEbBCE6_Gew4O578OXnruF9ccGT3qy4e-Ff_1diTzEBQV_XxvekURDLJ6uh-NgkHcE5F7rD6pSQygdhA0kWIoCp6JMxQUt44lolMq4cwT_EM=&original_referer=https://portfolio-mu-teal-88.vercel.app/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fbilson-digal-099853368%2F" data-cursor-view class="block py-12 border-b border-gray-800 gsap-fade-up group" target="_blank">
+                            <div class="project-card group" data-cursor-view>
+  <div class="project-content">
+    <span class="project-number">04</span>
+    <h3 class="project-title"> Safora Data</h3>
+    <p class="project-description">  A data analytics platform for businesses</p>
+    <div class="project-overlay">
+      <span class="project-tech">Next.js · Tailwind CSS · Firebase</span>
+      <button class="project-btn">View Project →</button>
+    </div>
+  </div>
+</div> </a>
+    <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQE1Sr_gW4G9lQAAAZmW9LqI6RiIEbBCE6_Gew4O578OXnruF9ccGT3qy4e-Ff_1diTzEBQV_XxvekURDLJ6uh-NgkHcE5F7rD6pSQygdhA0kWIoCp6JMxQUt44lolMq4cwT_EM=&original_referer=https://portfolio-mu-teal-88.vercel.app/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fbilson-digal-099853368%2F" data-cursor-view class="block py-12 border-b border-gray-800 gsap-fade-up group" target="_blank">
+        <div class="project-card group" data-cursor-view>
+  <div class="project-content">
+    <span class="project-number">05</span>
+    <h3 class="project-title"> RoadHero</h3>
+    <p class="project-description"> Road Hero is a Roadside assistant    </p>
+    <div class="project-overlay">
+      <span class="project-tech">Next.js · Tailwind CSS · Firebase</span>
+      <button class="project-btn">View Project →</button>
+    </div>
+  </div>
+</div> </a>
+        </div>
+                    </div>
+                </div>  
+</section>
+            
+
+            <section id="certifications" data-section-name="certifications" class="relative min-h-screen w-full px-8 py-16 md:px-16 lg:px-24 flex items-center">
+  <div class="w-full max-w-7xl mx-auto">
+    <h2 class="text-6xl md:text-8xl text-gray-500 gsap-section-title font-bold mb-20">Certifications</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12">
+      <!-- Certification Card 1 -->
+      <div class="certification-card group">
+        <div class="certification-header">
+          <div class="certification-icon">🐍</div>
+          <div class="certification-badge">Verified</div>
+        </div>
+        <h3 class="certification-title">Python for Data Science, AI & Development</h3>
+        <p class="certification-issuer">Coursera · IBM</p>
+        <div class="certification-meta">
+          <span class="certification-date">Aug 2024</span>
+          <a href="https://www.coursera.org/account/accomplishments/verify/D7SQHEBN0XVD" 
+             target="_blank" 
+             class="certification-link">
+            View Certificate
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Certification Card 2 -->
+      <div class="certification-card group">
+        <div class="certification-header">
+          <div class="certification-icon">🎨</div>
+          <div class="certification-badge">Verified</div>
+        </div>
+        <h3 class="certification-title">UX Design: Accessibility & Collaboration</h3>
+        <p class="certification-issuer">Coursera · Google</p>
+        <div class="certification-meta">
+          <span class="certification-date">Jul 2024</span>
+          <a href="https://www.coursera.org/account/accomplishments/verify/EBZBE7C69JDA" 
+             target="_blank" 
+             class="certification-link">
+            View Certificate
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Certification Card 3 -->
+      <div class="certification-card group">
+        <div class="certification-header">
+          <div class="certification-icon">📱</div>
+          <div class="certification-badge">Verified</div>
+        </div>
+        <h3 class="certification-title">User Interface Design & Prototyping</h3>
+        <p class="certification-issuer">Coursera</p>
+        <div class="certification-meta">
+          <span class="certification-date">Jul 2024</span>
+          <a href="https://www.coursera.org/account/accomplishments/verify/IJT0694SWPZ0" 
+             target="_blank" 
+             class="certification-link">
+            View Certificate
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Certification Card 4 -->
+      <div class="certification-card group">
+        <div class="certification-header">
+          <div class="certification-icon">🌐</div>
+          <div class="certification-badge">Verified</div>
+        </div>
+        <h3 class="certification-title">HTML & CSS: Single-Page Website</h3>
+        <p class="certification-issuer">Coursera</p>
+        <div class="certification-meta">
+          <span class="certification-date">Jun 2024</span>
+          <a href="https://www.coursera.org/account/accomplishments/verify/UBVY8Z42IQWJ" 
+             target="_blank" 
+             class="certification-link">
+            View Certificate
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Certification Card 5 -->
+      <div class="certification-card group">
+        <div class="certification-header">
+          <div class="certification-icon">💡</div>
+          <div class="certification-badge">Verified</div>
+        </div>
+        <h3 class="certification-title">Designing for User Experience</h3>
+        <p class="certification-issuer">Coursera</p>
+        <div class="certification-meta">
+          <span class="certification-date">Jun 2024</span>
+          <a href="https://www.coursera.org/account/accomplishments/verify/YIVP6X0DEX4U" 
+             target="_blank" 
+             class="certification-link">
+            View Certificate
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Certification Card 6 -->
+      <div class="certification-card group">
+        <div class="certification-header">
+          <div class="certification-icon">📐</div>
+          <div class="certification-badge">Verified</div>
+        </div>
+        <h3 class="certification-title">Wireframes & Low-Fidelity Prototypes</h3>
+        <p class="certification-issuer">Coursera · Google</p>
+        <div class="certification-meta">
+          <span class="certification-date">May 2024</span>
+          <a href="https://www.coursera.org/account/accomplishments/verify/JMRT3HJLU8EQ" 
+             target="_blank" 
+             class="certification-link">
+            View Certificate
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Certification Card 7 -->
+      <div class="certification-card group">
+        <div class="certification-header">
+          <div class="certification-icon">🔍</div>
+          <div class="certification-badge">Verified</div>
+        </div>
+        <h3 class="certification-title">UX Design Process: Empathize & Define</h3>
+        <p class="certification-issuer">Coursera · Google</p>
+        <div class="certification-meta">
+          <span class="certification-date">May 2024</span>
+          <a href="https://www.coursera.org/account/accomplishments/verify/ICI5CJEE5D41" 
+             target="_blank" 
+             class="certification-link">
+            View Certificate
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Certification Card 8 -->
+      <div class="certification-card group">
+        <div class="certification-header">
+          <div class="certification-icon">🎯</div>
+          <div class="certification-badge">Verified</div>
+        </div>
+        <h3 class="certification-title">Foundations of UX Design</h3>
+        <p class="certification-issuer">Coursera · Google</p>
+        <div class="certification-meta">
+          <span class="certification-date">Apr 2024</span>
+          <a href="https://www.coursera.org/account/accomplishments/verify/39W7USV3TV8G" 
+             target="_blank" 
+             class="certification-link">
+            View Certificate
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <section id="contact" data-section-name="contact" class="min-h-[70svh] lg:min-h-[120vh] flex flex-col p-8 lg:p-12 relative">
+                <div class="flex flex-col items-center gap-12 pt-12 w-full">
+                    <div id="robo-container" data-w-id="f6618769-8942-5196-c2a1-07d3bb1949d6" class="spline-scene-3 top-0 absolute -z-10 hidden md:block" data-animation-type="spline" data-spline-url="https://prod.spline.design/8yucdOU58ZA1qCif/scene.splinecode">
+                        <canvas></canvas>
+                    </div>
+                    <nav class="w-full">
+                        <div class="flex justify-center items-center gap-x-6 text-lg text-brand-gray gsap-fade-up">
+                            <a href="https://www.linkedin.com/in/bilson-digal-099853368/" target="_blank" data-cursor-view class="hover:text-white transition-colors">LinkedIn</a>
+                            <a href="https://www.instagram.com/bilsonn_____/?igsh=d2M5ZDR6Z280ZmN6#" target="_blank" data-cursor-view class="hover:text-white transition-colors">Instagram</a>
+                            <a href="https://api.whatsapp.com/send/?phone=8917606856&text&type=phone_number&app_absent=0" target="_blank" data-cursor-view class="hover:text-white transition-colors">WhatsApp</a>
+                            <a href="https://github.com/bilsond58" target="_blank" data-cursor-view class="hover:text-white transition-colors">Github</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="flex-grow flex items-center justify-center">
+                    <h1 id="footer-text" class="text-white text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[14rem] font-black tracking-tighter leading-none">
+                        <span class="footer-char">
+                            <span class="footer-char-stroke">B</span>
+                            <span class="footer-char-fill">B</span>
+                        </span>
+                        <span class="footer-char">
+                            <span class="footer-char-stroke">i</span>
+                            <span class="footer-char-fill">i</span>
+                        </span>
+                        <span class="footer-char">
+                            <span class="footer-char-stroke">l</span>
+                            <span class="footer-char-fill">l</span>
+                        </span>
+                        <span class="footer-char">
+                            <span class="footer-char-stroke">s</span>
+                            <span class="footer-char-fill">s</span>
+                        </span>
+                        <span class="footer-char">
+                            <span class="footer-char-stroke">o</span>
+                            <span class="footer-char-fill">o</span>
+                        </span>
+                        <span class="footer-char">
+                            <span class="footer-char-stroke">n</span>
+                            <span class="footer-char-fill">n</span>
+                        </span>
+                
+                    </h1>
+                </div>
+                <div class="w-full text-center pb-4">
+                    <p class="text-sm text-brand-gray">&copy;2024 Bilson Digal. All Rights Reserved.
+                </div>
+            </section>
+            <!-- Floating background elements -->
+<div id="floating-elements" class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+  <div class="floating-shape shape-1"></div>
+  <div class="floating-shape shape-2"></div>
+  <div class="floating-shape shape-3"></div>
+  <div class="floating-shape shape-4"></div>
+  <div class="floating-shape shape-5"></div>
+</div>
+        </main>
+        <script>
+
+            if (window.innerWidth < 768) {
+                let e = document.getElementById("robo-container");
+                e && e.remove()
+            }
+            function loadScript(a) {
+                return new Promise( (e, t) => {
+                    var o = document.createElement("script");
+                    o.src = a,
+                    o.async = !0,
+                    o.onload = () => e(),
+                    o.onerror = () => t(new Error("Failed to load " + a)),
+                    document.head.appendChild(o)
+                }
+                )
+            }
+            async function ensureGlobeLibs() {
+                window.Globe || (window.THREE || await loadScript("https://unpkg.com/three"),
+                await loadScript("https://unpkg.com/globe.gl"))
+            }
+            document.addEventListener("DOMContentLoaded", function() {
+                function e(e, t=28) {
+                    var e = e.getBoundingClientRect()
+                      , o = e.left + e.width / 2
+                      , a = e.top + e.height / 2;
+                    for (let e = 0; e < t; e++) {
+                        let e = document.createElement("span");
+                        e.className = "particle",
+                        e.style.left = o + "px",
+                        e.style.top = a + "px",
+                        document.body.appendChild(e);
+                        var n = Math.random() * Math.PI * 2
+                          , r = 50 + 120 * Math.random()
+                          , l = Math.cos(n) * r
+                          , n = Math.sin(n) * r;
+                        gsap.fromTo(e, {
+                            x: 0,
+                            y: 0,
+                            scale: gsap.utils.random(.6, 1.2),
+                            opacity: 1
+                        }, {
+                            x: l,
+                            y: n,
+                            opacity: 0,
+                            duration: gsap.utils.random(.35, .6),
+                            ease: "power2.out",
+                            onComplete: () => e.remove()
+                        })
+                    }
+                }
+                function t(a, n, r=1e3) {
+                    let l = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*{}[]<>/\\|"
+                      , s = n.length;
+                    gsap.parseEase("power2.out");
+                    let i = performance.now();
+                    a.classList.add("glitch"),
+                    e(a),
+                    setTimeout( () => e(a, 22), 120),
+                    requestAnimationFrame(function e(t) {
+                        if (Math.min(1, Math.max(0, (t - i) / r)) < 1) {
+                            let t = "";
+                            for (let e = 0; e < s; e++) {
+                                var o = n[e];
+                                t += " " === o ? " " : l[Math.floor(Math.random() * l.length)]
+                            }
+                            a.textContent = t,
+                            requestAnimationFrame(e)
+                        } else
+                            a.textContent = n,
+                            a.classList.remove("glitch")
+                    })
+                }
+                gsap.registerPlugin(ScrollTrigger);
+                let i = document.getElementById("cursor-dot")
+                  , c = document.getElementById("cursor-text");
+                if (!("ontouchstart"in window || 0 < navigator.maxTouchPoints)) {
+                    let o = 0
+                      , a = 0
+                      , n = 0
+                      , r = 0;
+                    gsap.set(i, {
+                        xPercent: -50,
+                        yPercent: -50
+                    });
+                    window.addEventListener("mousemove", e => {
+                        o = e.clientX,
+                        a = e.clientY
+                    }
+                    ),
+                    gsap.ticker.add( () => {
+                        var e = o - n
+                          , t = a - r;
+                        n += .15 * e,
+                        r += .15 * t,
+                        gsap.set(i, {
+                            x: n,
+                            y: r
+                        })
+                    }
+                    ),
+                    document.addEventListener("mouseenter", () => {
+                        gsap.to(i, {
+                            scale: 1,
+                            duration: .3,
+                            ease: "power3.out"
+                        })
+                    }
+                    ),
+                    document.addEventListener("mouseleave", () => {
+                        gsap.to(i, {
+                            scale: 0,
+                            duration: .3,
+                            ease: "power3.out"
+                        })
+                    }
+                    );
+                    var d = document.querySelectorAll("[data-cursor-view]");
+                    let l = () => {
+                        var e = gsap.getProperty(i, "scale") || 1;
+                        gsap.set(c, {
+                            scale: 1 / e
+                        })
+                    }
+                      , s = null;
+                    d.forEach(t => {
+                        t.addEventListener("mouseenter", () => {
+                            var e = !(!t.closest('[data-theme="dark"]') && !document.querySelector('#main-header[data-theme="dark"]')) ? "#ffffff" : "#1c1c1c";
+                            s && s.kill(),
+                            s = gsap.to(i, {
+                                duration: .3,
+                                scale: 4,
+                                backgroundColor: "#26d137",
+                                ease: "power3.out",
+                                onUpdate: l,
+                                onComplete: l
+                            }),
+                            gsap.to(c, {
+                                duration: .25,
+                                opacity: 1,
+                                color: e,
+                                ease: "power3.out"
+                            }),
+                            l()
+                        }
+                        ),
+                        t.addEventListener("mouseleave", () => {
+                            s && s.kill(),
+                            s = gsap.to(i, {
+                                duration: .3,
+                                scale: 1,
+                                backgroundColor: "#39ff14",
+                                ease: "power3.out",
+                                onUpdate: l,
+                                onComplete: () => {
+                                    gsap.set(c, {
+                                        scale: 1
+                                    })
+                                }
+                            }),
+                            gsap.to(c, {
+                                duration: .25,
+                                opacity: 0,
+                                ease: "power3.out"
+                            })
+                        }
+                        )
+                    }
+                    ),
+                    document.querySelectorAll("[data-cursor-magnetic]").forEach(l => {
+                        let s = l.getBoundingClientRect();
+                        window.addEventListener("resize", () => {
+                            s = l.getBoundingClientRect()
+                        }
+                        ),
+                        l.addEventListener("mousemove", e => {
+                            var {clientX: e, clientY: t} = e
+                              , {left: o, top: a, width: n, height: r} = s;
+                            gsap.to(l, {
+                                x: .3 * (e - (o + n / 2)),
+                                y: .3 * (t - (a + r / 2)),
+                                duration: .5,
+                                ease: "power3.out"
+                            })
+                        }
+                        ),
+                        l.addEventListener("mouseleave", () => {
+                            gsap.to(l, {
+                                x: 0,
+                                y: 0,
+                                duration: .7,
+                                ease: "elastic.out(1, 0.5)"
+                            })
+                        }
+                        )
+                    }
+                    )
+                }
+                gsap.timeline({
+                    defaults: {
+                        duration: .8,
+                        ease: "power3.out",
+                        autoAlpha: 1
+                    }
+                }).fromTo("#home .gsap-fade-up", {
+                    y: 30,
+                    autoAlpha: 0
+                }, {
+                    y: 0,
+                    autoAlpha: 1,
+                    stagger: .1
+                });
+                var o, d = document.getElementById("hero-name");
+                d && (o = d.textContent.trim(),
+                t(d, o, 400)),
+                gsap.utils.toArray("section:not(#home)").forEach(e => {
+                    var t = e.querySelectorAll(".gsap-fade-up");
+                    0 !== t.length && gsap.fromTo(t, {
+                        y: 30,
+                        autoAlpha: 0
+                    }, {
+                        y: 0,
+                        autoAlpha: 1,
+                        stagger: .1,
+                        duration: .8,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: e,
+                            start: "top 80%",
+                            toggleActions: "restart none restart none"
+                        }
+                    })
+                }
+                ),
+                gsap.utils.toArray(".gsap-section-title").forEach(e => {
+                    gsap.set(e, {
+                        autoAlpha: 0,
+                        y: 30
+                    });
+                    var t = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: e.closest("section"),
+                            start: "top bottom",
+                            end: "bottom top",
+                            scrub: 1.2
+                        }
+                    });
+                    t.to(e, {
+                        autoAlpha: 1,
+                        y: 0,
+                        duration: .1,
+                        ease: "power2.out"
+                    }),
+                    t.to(e, {
+                        y: -80,
+                        ease: "none"
+                    }, ">")
+                }
+                );
+                let a = document.getElementById("main-header")
+                  , n = document.getElementById("header-initial-left")
+                  , r = document.getElementById("header-initial-right")
+                  , l = document.getElementById("header-scrolled-left")
+                  , s = document.getElementById("header-scrolled-right");
+                ScrollTrigger.create({
+                    trigger: "#home",
+                    start: "bottom top",
+                    onEnter: () => {
+                        l.classList.remove("pointer-events-none"),
+                        s.classList.remove("pointer-events-none"),
+                        n.classList.add("pointer-events-none"),
+                        r.classList.add("pointer-events-none"),
+                        gsap.to([n, r], {
+                            autoAlpha: 0,
+                            duration: .3
+                        }),
+                        gsap.to([l, s], {
+                            autoAlpha: 1,
+                            duration: .3,
+                            delay: .1
+                        }),
+                        gsap.to(a, {
+                            backgroundColor: "#1c1c1c",
+                            duration: .4
+                        }),
+                        a.setAttribute("data-theme", "dark")
+                    }
+                    ,
+                    onLeaveBack: () => {
+                        n.classList.remove("pointer-events-none"),
+                        r.classList.remove("pointer-events-none"),
+                        l.classList.add("pointer-events-none"),
+                        s.classList.add("pointer-events-none"),
+                        gsap.to([l, s], {
+                            autoAlpha: 0,
+                            duration: .3
+                        }),
+                        gsap.to([n, r], {
+                            autoAlpha: 1,
+                            duration: .3,
+                            delay: .1
+                        }),
+                        gsap.to(a, {
+                            backgroundColor: "transparent",
+                            duration: .4
+                        }),
+                        a.removeAttribute("data-theme")
+                    }
+                })
+            }),
+            ( () => {
+                var e;
+                window.matchMedia("(min-width: 768px)").matches ? (async () => {
+                    try {
+                        let s = document.getElementById("globe-viz")
+                          , i = null
+                          , c = null
+                          , d = null;
+                        var e;
+                        let g = null;
+                        function a(e) {
+                            e && ([e.map, e.alphaMap, e.aoMap, e.bumpMap, e.displacementMap, e.emissiveMap, e.envMap, e.lightMap, e.metalnessMap, e.normalMap, e.roughnessMap].forEach(e => e && e.dispose && e.dispose()),
+                            e.dispose) && e.dispose()
+                        }
+                        async function n() {
+                            if (!s || d)
+                                d && console.log("[Globe] Already initialized. Skipping init.");
+                            else
+                                try {
+                                    var e = await (i || (c || (console.log("[Globe] Fetching countries geojson..."),
+                                    c = fetch("//unpkg.com/globe.gl@2.9.2/example/datasets/ne_110m_admin_0_countries.geojson").then(e => {
+                                        if (e.ok)
+                                            return e.json();
+                                        throw new Error("HTTP " + e.status)
+                                    }
+                                    ).then(e => (i = e,
+                                    console.log("[Globe] Countries geojson fetched and cached."),
+                                    e)).catch(e => {
+                                        throw c = null,
+                                        e
+                                    }
+                                    )),
+                                    console.log("[Globe] Using cached countries geojson."),
+                                    c));
+                                    let o = [{
+                                        lat: 1.3521,
+                                        lng: 103.8198,
+                                        name: "Singapore"
+                                    }, {
+                                        lat: 20.5937,
+                                        lng: 78.9629,
+                                        name: "India"
+                                    }]
+                                      , a = [{
+                                        lat: 51.5072,
+                                        lng: -.1276,
+                                        name: "London"
+                                    }, {
+                                        lat: 40.7128,
+                                        lng: -74.006,
+                                        name: "New York"
+                                    }, {
+                                        lat: 35.6762,
+                                        lng: 139.6503,
+                                        name: "Tokyo"
+                                    }, {
+                                        lat: 34.0522,
+                                        lng: -118.2437,
+                                        name: "Los Angeles"
+                                    }, {
+                                        lat: 50.1109,
+                                        lng: 8.6821,
+                                        name: "Frankfurt"
+                                    }, {
+                                        lat: -33.8688,
+                                        lng: 151.2093,
+                                        name: "Sydney"
+                                    }, {
+                                        lat: -23.5505,
+                                        lng: -46.6333,
+                                        name: "São Paulo"
+                                    }];
+                                    var t, n, r = Array.from({
+                                        length: 15
+                                    }, () => {
+                                        var e = o[Math.floor(Math.random() * o.length)]
+                                          , t = a[Math.floor(Math.random() * a.length)];
+                                        return {
+                                            startLat: e.lat,
+                                            startLng: e.lng,
+                                            endLat: t.lat,
+                                            endLng: t.lng,
+                                            color: "#39ff14"
+                                        }
+                                    }
+                                    ), l = [...o, ...a];
+                                    (d = Globe()(s).backgroundColor("rgba(0,0,0,0)").polygonsData(e.features).polygonCapColor( () => "rgba(44, 44, 44, 0.7)").polygonSideColor( () => "rgba(100, 100, 100, 0.1)").polygonStrokeColor( () => "#3a3a3a").atmosphereColor("#39ff14").atmosphereAltitude(.15).pointsData(l).pointColor(e => o.includes(e) ? "#ffffff" : "#39ff14").pointRadius(e => o.includes(e) ? .35 : .15).pointAltitude(.01).pointLabel("name").arcsData(r).arcColor("color").arcDashLength(.4).arcDashGap(.8).arcDashAnimateTime( () => 2e3 * Math.random() + 1500).arcStroke(.25)).controls().autoRotate = !0,
+                                    d.controls().autoRotateSpeed = .5,
+                                    d.controls().enableZoom = !1,
+                                    d.controls().minPolarAngle = Math.PI / 2.1,
+                                    d.controls().maxPolarAngle = Math.PI / 2.1,
+                                    console.log("[Globe] Initialized and controls configured."),
+                                    g = ScrollTrigger.create({
+                                        trigger: "#network",
+                                        start: "top 85%",
+                                        end: "bottom 15%",
+                                        onToggle: e => {
+                                            d.controls().autoRotate = e.isActive
+                                        }
+                                    }),
+                                    s && s.parentElement && d && ({width: t, height: n} = s.parentElement.getBoundingClientRect(),
+                                    d.width(t).height(n),
+                                    console.log(`[Globe] Initial size set to ${Math.round(t)}x${Math.round(n)} (no auto-resize).`))
+                                } catch (e) {
+                                    console.error("Failed to initialize globe:", e),
+                                    s && (s.innerHTML = '<p class="text-brand-gray">Could not load network visualization.</p>')
+                                }
+                        }
+                        s && (e = document.getElementById("network")) && (new IntersectionObserver(e => {
+                            e.forEach(e => {
+                                if (e.isIntersecting)
+                                    console.log("[Globe][IO] Section near viewport: initializing/resuming..."),
+                                    ensureGlobeLibs().then( () => n()).then( () => {
+                                        try {
+                                            d && d.controls && (d.controls().autoRotate = !0),
+                                            console.log("[Globe] Auto-rotate enabled.")
+                                        } catch (e) {}
+                                    }
+                                    );
+                                else {
+                                    console.log("[Globe][IO] Section left proximity: pausing and unloading...");
+                                    try {
+                                        d && d.controls && (d.controls().autoRotate = !1),
+                                        console.log("[Globe] Auto-rotate disabled.")
+                                    } catch (e) {}
+                                    try {
+                                        if (console.log("[Globe] Cleaning up (unloading) globe..."),
+                                        g && (g.kill(),
+                                        g = null),
+                                        d) {
+                                            try {
+                                                d.controls && d.controls().autoRotate && (d.controls().autoRotate = !1)
+                                            } catch (e) {}
+                                            try {
+                                                var t = d.scene && d.scene()
+                                                  , o = (t && t.traverse(e => {
+                                                    e.geometry && e.geometry.dispose && e.geometry.dispose(),
+                                                    e.material && (Array.isArray(e.material) ? e.material.forEach(a) : a(e.material))
+                                                }
+                                                ),
+                                                d.renderer && d.renderer());
+                                                o && o.dispose && o.dispose()
+                                            } catch (e) {}
+                                        }
+                                        s && (s.innerHTML = "")
+                                    } finally {
+                                        d = null,
+                                        console.log("[Globe] Globe cleaned up.")
+                                    }
+                                }
+                            }
+                            )
+                        }
+                        ,{
+                            root: null,
+                            rootMargin: "300px 0px 300px 0px",
+                            threshold: 0
+                        }).observe(e),
+                        console.log("[Globe][IO] IntersectionObserver attached with rootMargin=300px."))
+                    } catch (e) {
+                        console.error("[Globe] Library load failed:", e)
+                    }
+                }
+                )() : (console.log("[Globe] Skipping load on small screens."),
+                (e = document.getElementById("globe-viz")) && (e.innerHTML = ""))
+            }
+            )();
+            let footerFillChars = document.querySelectorAll(".footer-char-fill");
+            0 < footerFillChars.length && gsap.to(footerFillChars, {
+                clipPath: "inset(0% 0 0 0)",
+                ease: "none",
+                stagger: .05,
+                scrollTrigger: {
+                    trigger: "#contact",
+                    start: "center 80%",
+                    end: "bottom bottom",
+                    scrub: 1.5
+                }
+            }),
+            window.matchMedia("(min-width: 768px)").matches && loadScript("https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66925860b9bd1323ee36dcf8").then( () => loadScript("js/webflow.js")).catch(e => console.error("[Webflow] Failed to load:", e))
+        </script>
+    </body>
+
+</html> 
