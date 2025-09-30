@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://my-portfolio-n3b5.vercel.app/</loc>
+    <lastmod>2025-09-30</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Example extra pages (add if you have them) -->
+  <url>
+    <loc>https://my-portfolio-n3b5.vercel.app/projects</loc>
+    <lastmod>2025-09-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://my-portfolio-n3b5.vercel.app/contact</loc>
+    <lastmod>2025-09-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
